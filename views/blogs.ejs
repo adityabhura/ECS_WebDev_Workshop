@@ -1,0 +1,97 @@
+<%- include("partials/header.ejs"); -%>
+
+<div class="container2">
+
+       <div class="block">
+           <div class="heading">
+               <div class="top">
+                   <div class="blogname">Most Imp Blog</div>
+
+                   <div class="date"><%= d %></div>
+               </div>
+               <i class="fas fa-share-alt"></i>
+
+           </div>
+
+           <div class="photo">
+               <img
+                   src="https://thumbs.dreamstime.com/b/beautiful-autumn-scenery-park-beautiful-autumn-scenery-park-outdoor-photography-sunrise-light-101482086.jpg" />
+           </div>
+           <div class="message">
+              <%= message %>
+           </div>
+           <div class="bottom">
+               <div class="postcomment">
+                   Post a Comment
+                   <i class="fas fa-comment-alt"></i>
+               </div>
+               <div class="read">Read More...</div>
+           </div>
+       </div>
+
+
+       <div class="block">
+           <div class="heading">
+
+               <div class="top">
+                   <div class="blogname">Most Imp Blog</div>
+
+                   <div class="date"><%= d %></div>
+               </div>
+               <i class="fas fa-share-alt"></i>
+
+           </div>
+
+           <div class="photo">
+               <img
+                   src="https://thumbs.dreamstime.com/b/beautiful-autumn-scenery-park-beautiful-autumn-scenery-park-outdoor-photography-sunrise-light-101482086.jpg" />
+           </div>
+           <div class="message">
+                 <%= message %>
+           </div>
+           <div class="bottom">
+               <div class="postcomment">
+                   Post a Comment
+                   <i class="fas fa-comment-alt"></i>
+               </div>
+               <div class="read">Read More...</div>
+           </div>
+       </div>
+
+
+   <% for(var i=0;i<blogs.length;i++){ %>
+
+     <div class="block">
+        <div class="heading">
+
+        <div class="top">
+               <div class="blogname"> <%= blogs[i].title %></div>
+
+                <div class="date"><%= d %></div>
+             </div>
+             <i class="fas fa-share-alt"></i>
+
+         </div>
+
+         <div class="photo">
+             <img
+                 src="https://thumbs.dreamstime.com/b/beautiful-autumn-scenery-park-beautiful-autumn-scenery-park-outdoor-photography-sunrise-light-101482086.jpg" />
+         </div>
+         <div class="message">
+              <%= blogs[i].content %>
+         </div>
+         <div class="bottom">
+             <div class="postcomment">
+                 Post a Comment
+                 <i class="fas fa-comment-alt"></i>
+             </div>
+             <div class="read">Read More...</div>
+        </div>
+     </div>
+
+
+   <% } %>
+
+   </div>
+
+   <%- include("partials/footer.ejs"); -%>
